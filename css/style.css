@@ -109,8 +109,8 @@ nav li {
 
 .top {
     height: 100vh;
-    background-image: url(../img/color.png);
-    background-repeat: round;
+    background-image: url(../img/color_top.png);
+    background-size: cover;
 }
 
 #text h5 {
