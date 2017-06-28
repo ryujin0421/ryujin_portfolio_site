@@ -3,36 +3,180 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>RYUJIN_SITE</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Timmana" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>ryujin_2017</title>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet" />
+    <script src="js/jquery.lazylinepainter-1.7.0.min.js"></script>
+    <script src="js/text.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.fuwat').css('visibility', 'hidden');
+            $(window).scroll(function() {
+                var windowHeight = $(window).height(),
+                    topWindow = $(window).scrollTop();
+                $('.fuwat').each(function() {
+                    var objectPosition = $(this).offset().top;
+                    if (topWindow > objectPosition - windowHeight + 200) {
+                        $(this).addClass("fuwatAnime");
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        $(function() {
+            // #で始まるリンクをクリックしたら実行されます
+            $('a[href^=#]').click(function() {
+                // スクロールの速度
+                var speed = 400; // ミリ秒で記述
+                var href = $(this).attr("href");
+                var target = $(href == "#" || href == "" ? 'html' : href);
+                var position = target.offset().top;
+                $('body,html').animate({
+                    scrollTop: position
+                }, speed, 'swing');
+                return false;
+            });
+        });
+    </script>
+
 </head>
+
 <body>
-   
-    <div class="top">
-        <nav>
-            <ul class="snip1155">
-                <li><a href="index.html">TOP</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="history.html">HISTORY</a></li>
-                <li><a href="skill.html">SKILL</a></li>
-                <li><a href="vision.html">VISION</a></li>
-                <li><a href="product.html">PRODUCTS</a></li>
-            </ul>
-        </nav>
-        
-        <div class="animation">
-       <div class="canvas">
-            <div id="line"></div>
-            <img src="img/entretanment.png" alt="" id="illust">
+    <nav>
+        <ul>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#work">WORK</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="logo">
+            <img src="img/ryujin_oyama.png" alt="">
         </div>
+
+        <div class="line">
+            <img src="img/color_line.png" alt="" id="color">
+            <div class="move">
+                <div id="svg"></div>
+            </div>
         </div>
+
+        <div class="move">
+            <div id="svg"></div>
+        </div>
+
+    </header>
+
+    <div id="content">
+
+        <div class="title" id="about">
+            <img src="img/about.png" alt="">
+        </div>
+
+        <div class="name fuwat">
+            <h2>
+                <span>Designer/Photographer
+            </span><br> RYUJIN OYAMA
+            </h2>
+        </div>
+
+        <div class="ryujin fuwat">
+            <img src="img/ryujin.png" alt="">
+        </div>
+
+        <div class="text fuwat">
+            <p>デジタルハリウッド大学4年grapic/webデザイン専攻。 ものづくりで人々を喜ばせたいと思いデジタルハリウッド大学に入学する。 2014年Life is tech(中高生向けIT教育)でデザイナーメンターとしてJOIN。 illustratorPhotoshopなどのデザインツールやhtml/css/javascriptなどの言語を使用したwebサイト構築を教育する。カリキュラム作成、webサービスの開発を携わる。 2016年に月１０００万の収益を得るメディアサービスのデザイナーを務め、ユーザーの価値を最大限に見出すためにUI/UXの部分を改善に励む。 学生にして3つの新規事業の立ち上げに携わり幅広いメディアサービスを運用している。
+            </p>
+        </div>
+
+        <div class="icon fuwat">
+            <a href="https://www.instagram.com/bigmountain421/?hl=ja" target="_blank" class="animation"><img src="img/insta.png" alt=""></a>
+            <a href="https://twitter.com/ryujin19950421" target="_blank" class="animation"><img src="img/twitter.png" alt=""></a>
+            <a href="https://www.facebook.com/profile.php?id=100004433230244" target="_blank" class="animation"><img src="img/face.png" alt=""></a>
+        </div>
+
+        <div class="title">
+            <img src="img/skill.png" alt="">
+        </div>
+
+        <div class="tool">
+            <img src="img/tool.png" alt="">
+            <img src="img/tool_02.png" alt="" class="gage01 fuwat">
+        </div>
+
+        <div class="kinds">
+            <img src="img/kinds.png" alt="">
+            <img src="img/kinds_02.png" alt="" class="gage02 fuwat">
+        </div>
+
+        <div class="title" id="work">
+            <img src="img/works.png" alt="">
+
+            <div class="layout">
+                <div class="box">
+                   <img src="img/motety.png" alt="" width="300">
+                    <div class="mask">
+                        <div class="caption">
+                        <a href="https://motety.com/" target="_blank">
+                        WEB SERVICES
+                        </a>
+                        </div>
+                    </div>
+                </div>
+                
+                   <div class="box">
+                   <img src="img/arch.png" alt="" width="300">
+                    <div class="mask">
+                        <div class="caption">
+                        <a href="https://xd.adobe.com/view/54ca642f-5315-40f2-8236-4042a9922d97/" target="_blank">
+                        APPRICATION
+                        </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="box">
+                   <img src="img/mozer.png" alt="" width="300">
+                    <div class="mask">
+                        <div class="caption">
+                        <a href="https://mozer.io/" target="_blank">
+                        WEB SERVICES
+                        </a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="btn">
+            <a href="https://ryujin0421.github.io/ryujin_products/" target="_blank">MORE</a>
+        </div>
+
+        <div class="title">
+            <img src="img/vison.png" alt="">
+        </div>
+
+        <div class="text fuwat" id="contact">
+            <h2>“エンターテイナーでありたい”</h2>
+            <p> 将来なりたいものはなにもなかった高校時代、漠然と好きなことを仕事にしたいと思っていた。自分にとって好きなこと、それは「喜ばせること」。自分が生きてきて幸せに感じる瞬間ていうのは寝ることや趣味に没頭してる時でもなく自分の周りの人が楽しそうに笑っていたり喜んでいる瞬間を見ることだ。これがあるから生活が便利になる。これがあるから人生楽しい。これのおかげでいい人と出会えた。どんなジャンルでもいい、自分が作ったもので誰かが喜びを感じてくれるなら一生そういうものを作り続けたい。 だから僕はエンターテイナーでありたい。たくさんの人の喜びを見るために。
+            </p>
+        </div>
+
+        <div class="btn last">
+            <a href="https://www.facebook.com/profile.php?id=100004433230244" target="_blank">CONTACT</a>
+        </div>
+
+
     </div>
-    
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script src="js/jquery.lazylinepainter-1.7.0.min.js"></script>
-  <script src="js/text.js"></script> 
+
+    <footer>© 2017 Ryujin oyama all tights reserved.</footer>
 </body>
 
 </html>
