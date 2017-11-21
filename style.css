@@ -1,317 +1,329 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 nav {
-    position: fixed;
-    margin-top: 20px;
-    margin-left: 20px;
+  position: fixed;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
 li {
-    list-style: none;
-    margin-bottom: 10px;
+  list-style: none;
+  margin-bottom: 10px;
 }
 
 li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.5rem;
-    font-family: 'Open Sans Condensed', sans-serif;
-    letter-spacing: 2px;
-    font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  font-family: 'Open Sans Condensed', sans-serif;
+  letter-spacing: 2px;
+  font-weight: 600;
 }
 
 li a:hover {
-    color: #fff;
-    border-bottom: 2px solid #fff;
+  color: #fff;
+  border-bottom: 2px solid #fff;
 }
 
 header {
-    width: 100%;
-    height: 800px;
-    background-image: url("./img/top.jpg");
-    background-size: cover;
-    background-position: center center;
+  width: 100%;
+  height: 800px;
+  background-image: url("./img/top.jpg");
+  background-size: cover;
+  background-position: center center;
 }
 
 .logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  z-index: 3;
+}
+
+.line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  z-index: 1;
+}
+
+#color {
+  display: none;
+}
+
+.move {
+  width: 662px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  z-index: 2;
+}
+
+#content {
+  background-image: url(img/bg_02.png);
+  background-size: cover;
+}
+
+.title {
+  text-align: center;
+  padding-top: 100px;
+}
+
+.name {
+  padding-top: 50px;
+}
+
+.name h2 {
+  text-align: center;
+  color: #fff;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 4px;
+  font-style: italic;
+}
+
+.name span {
+  font-size: 1rem;
+}
+
+.ryujin {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.text {
+  width: 700px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.text p {
+  color: #fff;
+  font-size: 1rem;
+  font-family: "Sawarabi Mincho";
+}
+
+.icon {
+  display: flex;
+  width: 187px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.icon img {
+  margin-left: 10px;
+}
+
+.animation {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.animation:hover {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+
+.tool {
+  width: 700px;
+  margin: 0 auto;
+  padding-top: 50px;
+  position: relative;
+}
+
+.kinds {
+  width: 775px;
+  margin: 0 auto;
+  padding-top: 50px;
+  position: relative;
+}
+
+.gage01 {
+  width: 259px;
+  left: 33.3%;
+  top: 25.5%;
+  position: absolute;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.gage02 {
+  width: 259px;
+  left: 35.5%;
+  top: 25.5%;
+  position: absolute;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.text h2 {
+  color: #fff;
+  font-size: 2rem;
+  font-style: italic;
+  font-family: "Sawarabi Mincho";
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.layout {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 50px;
+}
+
+.box {
+  width: 332px;
+  height: 208px;
+  overflow: hidden;
+  position: relative;
+  margin: 50px 50px;
+}
+
+.box .caption {
+  font-size: 130%;
+  color: #fff;
+  padding-left: 0px;
+}
+
+.caption a {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 4px;
+  color: #fff;
+  width: 300px;
+  height: 208px;
+  text-decoration: none;
+  display: block;
+  line-height: 208px;
+}
+
+.box .mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.box:hover .mask {
+  opacity: 1;
+  padding-left: 10px;
+  /* 右にずらす */
+}
+
+.btn {
+  width: 300px;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 100px;
+}
+
+.btn a {
+  width: 300px;
+  font-size: 2rem;
+  font-style: italic;
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-decoration: none;
+  border-radius: 35px;
+  display: block;
+  text-align: center;
+  padding: 10px 0 10px;
+  text-decoration: none;
+  background-color: #333333;
+  color: #fff;
+}
+
+.btn a:hover {
+  background-color: #CF1076;
+  transition: 0.3s;
+}
+
+.last {
+  padding-bottom: 100px;
+}
+
+footer {
+  font-style: italic;
+  letter-spacing: 3px;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 150px;
+  color: #fff;
+  height: 150px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  background-image: url("./img/top.png");
+  background-position: bottom;
+}
+
+.fuwatAnime {
+  -webkit-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1.5s;
+  -ms-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-name: fuwatAnime;
+  -ms-animation-name: fuwatAnime;
+  animation-name: fuwatAnime;
+  visibility: visible !important;
+}
+
+@-webkit-keyframes fuwatAnime {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@keyframes fuwatAnime {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  display: none;
+}
+
+@media screen and (max-width: 750px) {
+  .logo {
     position: absolute;
     top: 50%;
     left: 50%;
     -webkit-transform: translateY(-50%) translateX(-50%);
     transform: translateY(-50%) translateX(-50%);
     z-index: 3;
-}
-
-.line {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translateY(-50%) translateX(-50%);
-    transform: translateY(-50%) translateX(-50%);
-    z-index: 1;
-}
-
-#color {
-    display: none;
-}
-
-.move {
-    width: 662px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translateY(-50%) translateX(-50%);
-    transform: translateY(-50%) translateX(-50%);
-    z-index: 2;
-}
-
-#content {
-    background-image: url(img/bg_02.png);
-    background-size: cover;
-}
-
-.title {
-    text-align: center;
-    padding-top: 100px;
-}
-
-.name {
-    padding-top: 50px;
-}
-
-.name h2 {
-    text-align: center;
-    color: #fff;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 2rem;
-    letter-spacing: 4px;
-    font-style: italic;
-}
-
-.name span {
-    font-size: 1rem;
-}
-
-.ryujin {
-    text-align: center;
-    padding-top: 50px;
-}
-
-.text {
-    width: 700px;
-    margin: 0 auto;
-    padding-top: 50px;
-}
-
-.text p {
-    color: #fff;
-    font-size: 1rem;
-    font-family: "Sawarabi Mincho";
-}
-
-.icon {
-    display: flex;
-    width: 187px;
-    margin: 0 auto;
-    padding-top: 50px;
-}
-
-.icon img {
-    margin-left: 10px;
-}
-
-.animation {
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
-}
-
-.animation:hover {
-    -webkit-filter: grayscale(0);
-    filter: grayscale(0);
-}
-
-.tool {
-    width: 700px;
-    margin: 0 auto;
-    padding-top: 50px;
-    position: relative;
-}
-
-.kinds {
-    width: 775px;
-    margin: 0 auto;
-    padding-top: 50px;
-    position: relative;
-}
-
-.gage01 {
-    width: 259px;
-    left: 33.3%;
-    top: 25.5%;
-    position: absolute;
-    -webkit-transform: translateY(-50%) translateX(-50%);
-    transform: translateY(-50%) translateX(-50%);
-}
-
-.gage02 {
-    width: 259px;
-    left: 35.5%;
-    top: 25.5%;
-    position: absolute;
-    -webkit-transform: translateY(-50%) translateX(-50%);
-    transform: translateY(-50%) translateX(-50%);
-}
-
-.text h2 {
-    color: #fff;
-    font-size: 2rem;
-    font-style: italic;
-    font-family: "Sawarabi Mincho";
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.layout {
-    width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    margin-top: 50px;
-}
-
-.box {
-    width: 332px;
-    height: 208px;
-    overflow: hidden;
-    position: relative;
-    margin: 50px 50px;
-}
-
-.box .caption {
-    font-size: 130%;
-    color: #fff;
-    padding-left: 0px;
-}
-
-.caption a {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 1.8rem;
-    font-weight: 700;
-    font-style: italic;
-    letter-spacing: 4px;
-    color: #fff;
-    width: 300px;
-    height: 208px;
-    text-decoration: none;
-    display: block;
-    line-height: 208px;
-}
-
-.box .mask {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.4);
-    -webkit-transition: all 0.6s ease;
-    transition: all 0.6s ease;
-}
-
-.box:hover .mask {
-    opacity: 1;
-    padding-left: 10px;
-    /* 右にずらす */
-}
-
-.btn {
-    width: 300px;
-    margin: 0 auto;
-    display: flex;
-    margin-top: 100px;
-}
-
-.btn a {
-    width: 300px;
-    font-size: 2rem;
-    font-style: italic;
-    font-family: 'Open Sans Condensed', sans-serif;
-    text-decoration: none;
-    border-radius: 35px;
-    display: block;
-    text-align: center;
-    padding: 10px 0 10px;
-    text-decoration: none;
-    background-color: #333333;
-    color: #fff;
-}
-
-.btn a:hover {
-    background-color: #CF1076;
-    transition: 0.3s;
-}
-
-.last {
-    padding-bottom: 100px;
-}
-
-footer {
-    font-style: italic;
-    letter-spacing: 3px;
-    font-size: 1.5rem;
-    text-align: center;
-    line-height: 150px;
-    color: #fff;
-    height: 150px;
-    font-family: 'Open Sans Condensed', sans-serif;
-    background-image: url("./img/top.png");
-    background-position: bottom;
-}
-
-.fuwatAnime {
-    -webkit-animation-fill-mode: both;
-    -ms-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-duration: 1.5s;
-    -ms-animation-duration: 1.5s;
-    animation-duration: 1.5s;
-    -webkit-animation-name: fuwatAnime;
-    -ms-animation-name: fuwatAnime;
-    animation-name: fuwatAnime;
-    visibility: visible !important;
-}
-
-@-webkit-keyframes fuwatAnime {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateY(-20px);
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: translateY(0);
-    }
-}
-
-@keyframes fuwatAnime {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateY(-20px);
-        -ms-transform: translateY(-20px);
-        transform: translateY(-20px);
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-        transform: translateY(0);
-    }
-}
-
-h1 {
-    display: none;
+  }
+  /*--- ここにスタイルを書く ---*/
 }
